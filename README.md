@@ -10,12 +10,37 @@ De esta manera es sencillo saber qué habitaciones están disponibles, se adecue
 
 ## Explicación
 
-Este programa será realizado en c++, donde será posible crear un hotel con ciertos datos, al cual se le podrá agregar habitaciones de diferentes tipos (sencillas, dobles y deluxes), con características similares y otras distintas, además será posible que el cliente seleccione la habitación de preferencia y se le mostrará el costo por los días que se hospede y podrá poner la fecha de su checkIn y checkOut, así como modificarla si lo desea. También será posible observar si una habitación está disponible u ocupada por un huésped.
+Este programa será realizado en c++, donde será posible crear un hotel con datos como: nombre, ubicación y número de habitaciones, al cual se le podrá agregar habitaciones de diferentes tipos (sencillas, dobles y deluxes), con características similares como: número de camas, número de habitación, si tiene internet, si cuenta con terraza, costo por noche y si la habitación está disponible, así como otras características, que serían las siguientes:
+Sencilla:
+- Mini bar
+Doble
+- Mini bar
+- Espacio adicional en la habitación
+- Acceso al gym
+Deluxe
+- Bar
+- Espacio adicional en la habitación
+- Acceso al gym
+- Jacuzzi
+- Servicios adicionales
 
-
-## Instrucciones para ejecución
-- Se indicarán en un futuro
+Además será posible que el cliente seleccione la habitación de preferencia y se le mostrará el costo por los días que se hospede y podrá poner la fecha de su checkIn y checkOut, así como modificarla si lo desea. También será posible observar si una habitación está disponible u ocupada por un huésped. Finalmente el hotel tendrá información del cliente, la cual será su nombre, edad, teléfono, checkIn, checkOut, días que se hospeda y la habitación que tiene.
 
 
 ## Limitaciones
+- El programa estará limitado al registro de solo un hotel
+- Un cliente solo puede tener una habitación
+- No será posible agregar más habitaciones después de crear el hotel
+- En caso de ingresar días de hospedaje negativos, no funcionara
+- En caso de ingresar una cantidad negativa de habitaciones, no funcionara
+
+
+## Consideraciones
+El programa solo corre en la consola y está hecho con c++ standard por lo que corre en todos los sistemas operativos
+- compilar con: "g++ hotel.h habitacion.h sencilla.h doble.h deluxe.h cliente.h main.cpp"
+- correr en linux: "/a.out"
+- correr en windows: "a.exe"
+
+
+## Instrucciones para ejecución
 - Se indicarán en un futuro
