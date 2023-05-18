@@ -1,4 +1,4 @@
-# Administracion Hotel
+# Administración Hotel
 
 
 ## Contexto
