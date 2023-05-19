@@ -10,7 +10,7 @@ De esta manera es sencillo saber qué habitaciones están disponibles, se adecue
 
 ## Explicación
 
-Este programa será realizado en c++, donde será posible crear un hotel con datos como: nombre, ubicación y número de habitaciones, al cual se le podrá agregar habitaciones de diferentes tipos (sencillas, dobles y deluxes), con características similares como: número de camas, número de habitación, si tiene internet, si cuenta con terraza, costo por noche y si la habitación está disponible, así como otras características, que serían las siguientes:
+Este programa será realizado en c++, donde será posible crear un hotel con datos como: nombre, ubicación y número de habitaciones, al cual se le agregara habitaciones de diferentes tipos (sencillas, dobles y deluxes) al momento de ser creado el hotel, estás tendrán características similares como: número de camas, número de habitación, si tiene internet, si cuenta con terraza, costo por noche y si la habitación está disponible, así como otras características, que serían las siguientes:
 <br>Sencilla
 <ul>
   <li>Mini bar</li>
