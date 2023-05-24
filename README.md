@@ -1,4 +1,4 @@
-# Administración Hotel
+# Administración Hotel - Ricardo Sierra Roa A01709887
 
 
 ## Contexto
@@ -37,6 +37,7 @@ Además será posible que el cliente seleccione la habitación de preferencia y 
 - El programa estará limitado al registro de solo un hotel
 - Un cliente solo puede tener una habitación
 - No será posible agregar más habitaciones después de crear el hotel
+- Solo se podrá tener la misma cantidad de clientes y de habitaciones como máximo
 - En caso de ingresar días de hospedaje negativos, no funcionara
 - En caso de ingresar una cantidad negativa de habitaciones, no funcionara
 
