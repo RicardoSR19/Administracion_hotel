@@ -1,4 +1,13 @@
-//Ricardo Sierra Roa - A01709887
+/* 
+Ricardo Sierra Roa - A01709887
+Proyecto Administracion Hotel
+Creacion: 24 de mayo de 2023
+Ultima modificacion: 31 de mayo de 2023
+
+En esta clase se define al objeto tipo Deluxe, 
+la cual es clase hijo de la clase Habitacion.
+*/
+
 #ifndef DELUXE_H
 #define DELUXE_H
 
@@ -12,11 +21,11 @@ using namespace std;
  
 class Deluxe: public Habitacion{//Herencia con clase Habitacion
 	private: //Atributos
-        //Se declaran las variables
+        //Se declaran las variables privadas de instancia
 		bool bar, accesoGym, jacuzzi;
         string espacioAdicional, servicioAdicional;
 		
-	public: //Metodos
+	public: //Constructor y metodos publicos
         //Constructor
 		Deluxe(int numHabitacion, int numCamas, bool internet, bool terraza, int costoPorNoche, bool disponibilidad, bool bar, string espacioAdicional, bool accesoGym, bool jacuzzi, string servicioAdicional);
 		
@@ -35,7 +44,7 @@ class Deluxe: public Habitacion{//Herencia con clase Habitacion
         string getServicioAdicional();
 
         //Super string que nos da la informacion de la habitacion deluxe
-        string getDeluxeInfo();
+        string getRoomInfo();
 };
 
 //Constructor
@@ -89,8 +98,16 @@ string Deluxe::getServicioAdicional(){
     return servicioAdicional;
 }
 
-//Super string
-string Deluxe::getDeluxeInfo(){
+/**
+ * Superstring
+ * getRoomInfo imprimir la informacion de la habitacion Deluxe
+ * 
+ * Funcion que contcatena en un string toda la informacion de un objeto tipo Deluxe y la guarda en un string
+ *
+ * @param  
+ * @return string
+*/
+string Deluxe::getRoomInfo(){
     stringstream aux;
     aux<<getHabitacionInfo();
     if (bar==true){

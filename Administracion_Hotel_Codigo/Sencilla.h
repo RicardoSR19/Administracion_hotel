@@ -1,4 +1,13 @@
-//Ricardo Sierra Roa - A01709887
+/* 
+Ricardo Sierra Roa - A01709887
+Proyecto Administracion Hotel
+Creacion: 24 de mayo de 2023
+Ultima modificacion: 31 de mayo de 2023
+
+En esta clase se define al objeto tipo Sencilla, 
+la cual es clase hijo de la clase Habitacion.
+*/
+
 #ifndef SENCILLA_H
 #define SENCILLA_H
 
@@ -12,10 +21,10 @@ using namespace std;
  
 class Sencilla: public Habitacion{//Herencia con clase Habitacion
 	private: //Atributos
-        //Se declaran las variables
+        //Se declaran las variables privadas de instancia
 		bool miniBar;
 		
-	public: //Metodos
+	public: //Constructor y metodos publicos
         //Constructor
 		Sencilla(int numHabitacion, int numCamas, bool internet, bool terraza, int costoPorNoche, bool disponibilidad, bool miniBar);
 		
@@ -26,7 +35,7 @@ class Sencilla: public Habitacion{//Herencia con clase Habitacion
         bool getMiniBar();
 
         //Super string que nos da la informacion de la habitacion sencilla
-        string getSencillaInfo();
+        string getRoomInfo();
 };
 
 //Constructor
@@ -44,8 +53,16 @@ bool Sencilla::getMiniBar(){
     return miniBar;
 }
 
-//Super string
-string Sencilla::getSencillaInfo(){
+/**
+ * Superstring
+ * getRoomInfo imprimir la informacion de la habitacion Sencilla
+ * 
+ * Funcion que contcatena en un string toda la informacion de un objeto tipo Sencilla y la guarda en un string
+ *
+ * @param  
+ * @return string
+*/
+string Sencilla::getRoomInfo(){
     stringstream aux;
     aux<<getHabitacionInfo();
     if (miniBar==true){

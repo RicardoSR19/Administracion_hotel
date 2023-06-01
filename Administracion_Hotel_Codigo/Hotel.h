@@ -1,4 +1,15 @@
-//Ricardo Sierra Roa - A01709887
+/* 
+Ricardo Sierra Roa - A01709887
+Proyecto Administracion Hotel
+Creacion: 24 de mayo de 2023
+Ultima modificacion: 31 de mayo de 2023
+
+En esta clase se define al objeto tipo Hotel
+donde se agregan a los clientes y las habitaciones
+creadas, asi como contiene informacion de su ubicacion,
+nombre y numero de habitaciones.
+*/
+
 #ifndef HOTEL_H
 #define HOTEL_H
 
@@ -13,14 +24,14 @@ using namespace std;
  
 class Hotel{
 	private: //Atributos
-        //Se declaran las variables
+        //Se declaran las variables privadas de instancia
 		string nombre, ubicacion;
         int numHabitaciones=1000;
 		static const int numHabitacionesArr=1000;
         Habitacion arrHabitaciones[numHabitacionesArr];
         Cliente arrClientes[numHabitacionesArr];
 		
-	public: //Metodos
+	public: //Constructor y metodos publicos
         //Constructor
 		Hotel(string nombre, string ubicacion, int numHabitaciones);
 
@@ -52,24 +63,45 @@ Hotel::Hotel(string _nombre, string _ubicacion, int _numHabitaciones){
     numHabitaciones = _numHabitaciones;
 }
 
-//Relacion de agregacion de la clase habitacion
+
+/**
+ * Relacion de agregacion de la clase habitacion
+ * agregarHabitacion agregar las habitaciones creadas a un arreglo
+ *
+ * @param Habitacion e int 
+ * @return
+*/
 void Hotel::agregarHabitacion(Habitacion habitacion, int posicion){
     arrHabitaciones[posicion]=habitacion;
 }
 
-//Relacion de agregacion de la clase cliente
+/**
+ * Relacion de agregacion de la clase cliente
+ * agregarCliente agregar los clientes creadas a un arreglo
+ *
+ * @param Cliente e int 
+ * @return
+*/
 void Hotel::agregarCliente(Cliente cliente, int posicion){
     arrClientes[posicion]=cliente;
 }
 
-//Funcion para imprimir los clientes registrados
+/**
+ * cantidadClientes imprimir los clientes registrados
+ * 
+ * Funcion para guardar en un string los clientes 
+ * registrados/agregados dentro del arreglo de clientes del hotel 
+ *
+ * @param  
+ * @return string
+*/
 string Hotel::cantidadClientes(){
     stringstream aux;
     for(int i=0;i<numHabitaciones;i++){
         if (arrClientes[i].getNombre()==""){
             continue;
         }else{
-            aux<<"Cliente "<<i+1<<": "<<arrClientes[i].getNombre()<<endl;
+            aux<<"\n\t\tCliente "<<i+1<<": "<<arrClientes[i].getNombre()<<endl;
         }
     }
     return aux.str();
@@ -101,7 +133,15 @@ int Hotel::getNumHabitaciones(){
     return numHabitaciones;
 }
 
-//Superstring
+/**
+ * Superstring
+ * getHotelInfo imprimir la informacion del hotel
+ * 
+ * Funcion que contcatena en un string toda la informacion de un objeto tipo hotel y la guarda en un string
+ *
+ * @param  
+ * @return string
+*/
 string Hotel::getHotelInfo(){
     stringstream aux;
     aux<<"Nombre: "<<nombre<<endl;

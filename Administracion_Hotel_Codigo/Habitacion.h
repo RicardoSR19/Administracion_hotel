@@ -1,4 +1,14 @@
-//Ricardo Sierra Roa - A01709887
+/* 
+Ricardo Sierra Roa - A01709887
+Proyecto Administracion Hotel
+Creacion: 24 de mayo de 2023
+Ultima modificacion: 31 de mayo de 2023
+
+En esta clase se define al objeto tipo Habitacion, 
+la cual es clase padre de las habitaciones y contiene
+atributos que comparten todas las habitaciones.
+*/
+
 #ifndef Habitacion_H
 #define Habitacion_H
 
@@ -9,11 +19,11 @@ using namespace std;
  
 class Habitacion{
 	private: //Atributos
-        //Se declaran las variables
+        //Se declaran las variables privadas de instancia
 		int numHabitacion, numCamas, costoPorNoche;
         bool internet, terraza, disponibilidad; 
 		
-	public: //Metodos
+	public: //Constructor y metodos publicos
         //Constructor predefinido
         Habitacion(); 
         //Constructor
@@ -37,6 +47,7 @@ class Habitacion{
 
         //Super string que nos da la informacion de la habitacion
         string getHabitacionInfo();
+        virtual string getRoomInfo(){return "";}
 };
 
 //Constructor predefinido
@@ -109,7 +120,15 @@ int Habitacion::getDisponibilidad(){
     return disponibilidad;
 }
 
-//Super string
+/**
+ * Superstring
+ * getHabitacionInfo imprimir la informacion de la habitacion
+ * 
+ * Funcion que contcatena en un string toda la informacion de un objeto tipo habitacion y la guarda en un string
+ *
+ * @param  
+ * @return string
+*/
 string Habitacion::getHabitacionInfo(){
     stringstream aux;
     aux<<"Numero de habitacion: "<<numHabitacion<<endl;
@@ -124,7 +143,7 @@ string Habitacion::getHabitacionInfo(){
     }else{
         aux<<"Tiene terraza: no"<<endl;
     }
-    aux<<"Costo por noche: "<<costoPorNoche<<" MXN"<<endl;
+    aux<<"Costo por noche: $"<<costoPorNoche<<".00 MXN"<<endl;
     if (disponibilidad==true){
         aux<<"Disponible: si"<<endl;
     }else{

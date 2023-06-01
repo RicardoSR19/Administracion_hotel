@@ -1,4 +1,17 @@
-//Ricardo Sierra Roa - A01709887
+/* 
+Ricardo Sierra Roa - A01709887
+Proyecto Administracion Hotel
+Creacion: 24 de mayo de 2023
+Ultima modificacion: 31 de mayo de 2023
+
+En esta clase se define al objeto tipo Cliente, 
+donde al momento de crear un objeto de estos, tiene
+informacion, como nombre, edad, telefono, check-in,
+check-out y dias que se hospeda, asi como se le puede asignar
+una habitacion, calcular el pago de su hospedaje y moficiar sus
+fechas de check-in y check-out
+*/
+
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
@@ -8,17 +21,16 @@
 //Clase utilizada para agregacion
 #include "Habitacion.h"
 
-
 using namespace std;
  
 class Cliente{
 	private: //Atributos
-        //Se declaran las variables
+        //Se declaran las variables privadas de instancia
         string nombre, telefono, checkIn, checkOut;
 		int edad, diasHospedaje;
         Habitacion habitacion;    
 	
-    public: //Metodos
+    public: //Constructor y metodos publicos
         //Constructor predefinido
         Cliente();
         //Constructor
@@ -28,8 +40,8 @@ class Cliente{
 
         //Funcion para agregar habitacion al cliente
         void agregarHabitacion(Habitacion habitacion);
-        //Funcion que imprime en que habitacion se hospeda
-        string habitacionHospedaje();
+        //Funcion que imprime en que numero de habitacion se hospeda
+        int habitacionHospedaje();
         //Funcion para calcular e imprimir el pago del hospedaje
         string calcularPago();
 
@@ -81,19 +93,42 @@ Cliente::Cliente(string _nombre, int _edad, string _telefono, string _checkIn, s
     diasHospedaje = _diasHospedaje;
 }
 
-//Relacion de agregacion de la clase habitacion
+
+/**
+ * Relacion de agregacion de la clase habitacion
+ * agregarHabitacion agregar habitacion al cliente
+ * 
+ * Funcion para asignarle una habitacion a algun cliente registrado
+ *
+ * @param Habitacion 
+ * @return 
+*/
 void Cliente::agregarHabitacion(Habitacion _habitacion){
     habitacion = _habitacion;
 }
 
-//Funcion que imprime en que habitacion se hospeda
-string Cliente::habitacionHospedaje(){
-    stringstream aux;
-    aux<<"Numero de habitacion: "<<habitacion.getNumHabitacion()<<endl;
-    return aux.str();
+/**
+ * habitacionHospedaje regresar que habitacion tiene el cliente 
+ * 
+ * Funcion que regresa en que numero de habitacion se hospeda el cliente
+ *
+ * @param  
+ * @return int - numero de habitacion donde se hospeda el cliente 
+*/
+int Cliente::habitacionHospedaje(){
+    return habitacion.getNumHabitacion();
 }
 
-//Funcion para calcular e imprimir el pago del hospedaje
+/**
+ * calcularPago calcular el costo de hospedaje del cliente 
+ * 
+ * Funcion que calcula y regresra el costo total del 
+ * hospedaje del cliente registrado, en caso de no 
+ * tener habitacion, muestra que no cuenta con una
+ *
+ * @param  
+ * @return string - costo total a pagar del hospedaje 
+*/
 string Cliente::calcularPago(){
     stringstream aux;
     if (habitacion.getNumHabitacion()==0){
@@ -102,7 +137,7 @@ string Cliente::calcularPago(){
     }else{
         int ctotal;
         ctotal = diasHospedaje*habitacion.getCostoPorNoche();
-        aux<<"Costo total: "<<ctotal<<endl;
+        aux<<"Costo total: $"<<ctotal<<".00 MXN"<<endl;
         return aux.str();
     }
 }
@@ -157,7 +192,17 @@ int Cliente::getDiasHospedaje(){
     return diasHospedaje;
 }
 
-//Super string
+/**
+ * Superstring
+ * getClienteInfo imprimir la informacion del cliente
+ * 
+ * Funcion que contcatena en un string toda la informacion 
+ * de un objeto tipo Cliente y la guarda en un string para 
+ * despues imprimirla en un main.cpp
+ *
+ * @param  
+ * @return string
+*/
 string Cliente::getClienteInfo(){
     stringstream aux;
     aux<<"Nombre: "<<nombre<<endl;
