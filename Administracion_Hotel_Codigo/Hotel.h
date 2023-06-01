@@ -67,7 +67,7 @@ string Hotel::cantidadClientes(){
     stringstream aux;
     for(int i=0;i<numHabitaciones;i++){
         if (arrClientes[i].getNombre()==""){
-            break;
+            continue;
         }else{
             aux<<"Cliente "<<i+1<<": "<<arrClientes[i].getNombre()<<endl;
         }

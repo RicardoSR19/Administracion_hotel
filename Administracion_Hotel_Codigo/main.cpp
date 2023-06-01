@@ -12,6 +12,7 @@ habitaciones estan disponibles, asignar una habitacion a un cliente y ver
 la informacion guardada de los clientes y habitacions
 */
 #include <iostream>
+#include <windows.h>
 
 //Biblioteca de los clases del proyecto
 #include "Hotel.h"
@@ -88,6 +89,9 @@ int main(){
     cout<<cliente4.getClienteInfo();
     //Calcular e imprimir pago del cliente 4
     cout<<cliente4.calcularPago()<<endl;
+
+    cout<<"\n\n\tPulse una tecla para salir";
+    system("PAUSE>pausaHotel");
 
     return 0;
 } 
