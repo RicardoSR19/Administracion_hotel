@@ -9,7 +9,7 @@ Objetos. En este programa se ingresran los datos requeriudos para la
 adminstracion de un hotel, donde se pondra la informacion de los cuartos
 y de los clientes. Ademas se podra calcular el costo por noche, ver que 
 habitaciones estan disponibles, asignar una habitacion a un cliente y ver
-la informacion guardada de los clientes y habitacions
+la informacion guardada de los clientes
 */
 
 //Bibliotecas externas
