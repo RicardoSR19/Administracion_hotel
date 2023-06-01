@@ -30,7 +30,7 @@ Deluxe
   <li>Servicios adicionales</li>
 </ul>
 
-Además será posible que el cliente seleccione la habitación de preferencia y se le mostrará el costo por los días que se hospede y podrá poner la fecha de su checkIn y checkOut, así como modificarla si lo desea. También será posible observar si una habitación está disponible u ocupada por un huésped. Finalmente el hotel tendrá información del cliente, la cual será su nombre, edad, teléfono, checkIn, checkOut, días que se hospeda y la habitación que tiene.
+Además será posible que el cliente seleccione la habitación de preferencia y se le mostrará el costo por los días que se hospede y podrá poner la fecha de su Check-In y Check-Out, así como modificar su Check-In y Check-Out si lo desea. También será posible observar si una habitación está disponible o no disponible. Finalmente el hotel tendrá información del cliente, la cual será su nombre, edad, teléfono, checkIn, checkOut, días que se hospeda y la habitación que tiene.
 
 
 ## Limitaciones
@@ -38,6 +38,8 @@ Además será posible que el cliente seleccione la habitación de preferencia y 
 - Un cliente solo puede tener una habitación
 - No será posible agregar más habitaciones después de crear el hotel
 - Solo se podrá tener la misma cantidad de clientes y de habitaciones como máximo
+- No será posible eliminar a los clientes registrados (una vez llenada la base de datos de clientes se tendra que reiniciar el programa para poder agregar más clientes)
+- Una vez asignada una habitacion no podra ser eliminada su asignacion al cliente
 - En caso de ingresar días de hospedaje negativos, no funcionara
 - En caso de ingresar una cantidad negativa de habitaciones, no funcionara
 
