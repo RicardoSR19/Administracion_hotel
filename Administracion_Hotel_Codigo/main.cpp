@@ -4,8 +4,8 @@ Proyecto Administracion Hotel
 Creacion: 24 de mayo de 2023
 Ultima modificacion: 5 de junio de 2023
 
-Proyecto para la clase TC1030 Programación Orientado a
-Objetos. En este programa se ingresran los datos requeriudos para la
+Proyecto para la clase TC1030 Programacion Orientado a
+Objetos. En este programa se ingresaran los datos requeridos para la
 adminstracion de un hotel, donde se pondra la informacion de los cuartos
 y de los clientes. Ademas se podra calcular el costo por noche, ver que 
 habitaciones estan disponibles, asignar una habitacion a un cliente y ver
