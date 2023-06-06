@@ -28,7 +28,7 @@ class Cliente{
         //Se declaran las variables privadas de instancia
         string nombre, telefono, checkIn, checkOut;
 		int edad, diasHospedaje;
-        Habitacion habitacion;    
+        Habitacion *habitacion;    
 	
     public: //Constructor y metodos publicos
         //Constructor predefinido
@@ -39,7 +39,7 @@ class Cliente{
 		Cliente(string nombre, int edad, string telefono, string checkIn, string checkOut, int diasHospedaje);
 
         //Funcion para agregar habitacion al cliente
-        void agregarHabitacion(Habitacion habitacion);
+        void agregarHabitacion(Habitacion *habitacion);
         //Funcion que imprime en que numero de habitacion se hospeda
         int habitacionHospedaje();
         //Funcion para calcular e imprimir el pago del hospedaje
@@ -103,7 +103,7 @@ Cliente::Cliente(string _nombre, int _edad, string _telefono, string _checkIn, s
  * @param Habitacion 
  * @return 
 */
-void Cliente::agregarHabitacion(Habitacion _habitacion){
+void Cliente::agregarHabitacion(Habitacion *_habitacion){
     habitacion = _habitacion;
 }
 
@@ -116,7 +116,7 @@ void Cliente::agregarHabitacion(Habitacion _habitacion){
  * @return int - numero de habitacion donde se hospeda el cliente 
 */
 int Cliente::habitacionHospedaje(){
-    return habitacion.getNumHabitacion();
+    return habitacion->getNumHabitacion();
 }
 
 /**
@@ -131,12 +131,12 @@ int Cliente::habitacionHospedaje(){
 */
 string Cliente::calcularPago(){
     stringstream aux;
-    if (habitacion.getNumHabitacion()==0){
+    if (habitacion->getNumHabitacion()==0){
         aux<<"Costo total: No cuenta con habitacion"<<endl;
         return aux.str();
     }else{
         int ctotal;
-        ctotal = diasHospedaje*habitacion.getCostoPorNoche();
+        ctotal = diasHospedaje*habitacion->getCostoPorNoche();
         aux<<"Costo total: $"<<ctotal<<".00 MXN"<<endl;
         return aux.str();
     }
@@ -219,10 +219,10 @@ string Cliente::getClienteInfo(){
         aux<<"Check - Out: "<<checkOut<<endl;
     }
     aux<<"Dias de hospedaje: "<<diasHospedaje<<endl;
-    if (habitacion.getNumHabitacion()==0){
+    if (habitacion->getNumHabitacion()==0){
         aux<<"Habitacion en la que se hospeda: No cuenta con habitacion"<<endl;
     }else{
-        aux<<"Habitacion en la que se hospeda: "<<habitacion.getNumHabitacion()<<endl;
+        aux<<"Habitacion en la que se hospeda: "<<habitacion->getNumHabitacion()<<endl;
     }
     return aux.str();
 }

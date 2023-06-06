@@ -28,7 +28,7 @@ class Hotel{
 		string nombre, ubicacion;
         int numHabitaciones=1000;
 		static const int numHabitacionesArr=1000;
-        Habitacion arrHabitaciones[numHabitacionesArr];
+        Habitacion *arrHabitaciones[numHabitacionesArr];
         Cliente arrClientes[numHabitacionesArr];
 		
 	public: //Constructor y metodos publicos
@@ -36,7 +36,7 @@ class Hotel{
 		Hotel(string nombre, string ubicacion, int numHabitaciones);
 
         //Funcion para agregar habitaciones al hotel
-        void agregarHabitacion(Habitacion habitacion, int posicion);
+        void agregarHabitacion(Habitacion *habitacion, int posicion);
         //Funcion para agregar clientes al hotel
         void agregarCliente(Cliente cliente, int posicion);
         //Funcion para imprimir los clientes registrados
@@ -71,7 +71,7 @@ Hotel::Hotel(string _nombre, string _ubicacion, int _numHabitaciones){
  * @param Habitacion e int 
  * @return
 */
-void Hotel::agregarHabitacion(Habitacion habitacion, int posicion){
+void Hotel::agregarHabitacion(Habitacion *habitacion, int posicion){
     arrHabitaciones[posicion]=habitacion;
 }
 

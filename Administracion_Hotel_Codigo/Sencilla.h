@@ -25,6 +25,9 @@ class Sencilla: public Habitacion{//Herencia con clase Habitacion
 		bool miniBar;
 		
 	public: //Constructor y metodos publicos
+        //Constructor predefinido
+        Sencilla();
+
         //Constructor
 		Sencilla(int numHabitacion, int numCamas, bool internet, bool terraza, int costoPorNoche, bool disponibilidad, bool miniBar);
 		
@@ -37,6 +40,11 @@ class Sencilla: public Habitacion{//Herencia con clase Habitacion
         //Super string que nos da la informacion de la habitacion sencilla
         string getRoomInfo();
 };
+
+//Constructor predefinido
+Sencilla::Sencilla(){
+    miniBar = false;
+}
 
 //Constructor
 Sencilla::Sencilla(int _numHabitacion, int _numCamas, bool _internet, bool _terraza, int _costoPorNoche, bool _disponibilidad, bool _miniBar):Habitacion(_numHabitacion,_numCamas,_internet,_terraza, _costoPorNoche, _disponibilidad){
