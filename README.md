@@ -10,7 +10,7 @@ De esta manera es sencillo saber qué habitaciones están disponibles, se adecue
 
 ## Explicación
 
-Este programa será realizado en c++, donde será posible crear un hotel con datos como: nombre, ubicación y número de habitaciones, al cual se le agregara habitaciones de diferentes tipos (sencillas, dobles y deluxes) al momento de ser creado el hotel, estás tendrán características similares como: número de camas, número de habitación, si tiene internet, si cuenta con terraza, costo por noche y si la habitación está disponible, así como otras características, que serían las siguientes:
+Este programa fue realizado en c++, donde es posible crear un hotel con datos como: nombre, ubicación y número de habitaciones, al cual se le agregara habitaciones de diferentes tipos (sencillas, dobles y deluxes) al momento de ser creado el hotel, estás pueden tener características similares como: número de camas, número de habitación, si tiene internet, si cuenta con terraza, costo por noche y si la habitación está disponible, así como otras características, que son las siguientes:
 <br>Sencilla
 <ul>
   <li>Mini bar</li>
@@ -30,7 +30,7 @@ Deluxe
   <li>Servicios adicionales</li>
 </ul>
 
-Además será posible que el cliente seleccione la habitación de preferencia y se le mostrará el costo por los días que se hospede y podrá poner la fecha de su Check-In y Check-Out, así como modificar su Check-In y Check-Out si lo desea. También será posible observar si una habitación está disponible o no disponible. Finalmente el hotel tendrá información del cliente, la cual será su nombre, edad, teléfono, checkIn, checkOut, días que se hospeda y la habitación que tiene.
+Además es posible que el cliente seleccione la habitación de preferencia y se le mostrará el costo por los días que se hospede y podrá poner la fecha de su Check-In y Check-Out, así como modificar su Check-In y Check-Out si lo desea. También es posible observar si una habitación está disponible o no disponible. Finalmente el hotel tendrá información del cliente, la cual será su nombre, edad, teléfono, checkIn, checkOut, días que se hospeda y la habitación que tiene.
 
 
 ## Limitaciones
