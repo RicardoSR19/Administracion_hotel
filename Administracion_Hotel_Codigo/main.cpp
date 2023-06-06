@@ -76,20 +76,20 @@ int main(){
             //Ciclo para crear la cantidad asignada de habitaciones sencillas y agregarlas al hotel
             for(int i=0;i<sen;i++){
                 habitaciones[i] = new Sencilla(i+1,2,true,false,400,true, false);
-                hotel.agregarHabitacion(*habitaciones[i],i);
+                hotel.agregarHabitacion(habitaciones[i],i);
             }
 
             //Ciclo para crear la cantidad asignada de habitaciones dobles y agregarlas al hotel
             for(int i=0;i<dob;i++){
                 habitaciones[sen] = new Doble(sen+1,2,true,true,700,true, true, "Sala de estar", true);
-                hotel.agregarHabitacion(*habitaciones[sen],sen);
+                hotel.agregarHabitacion(habitaciones[sen],sen);
                 sen++;
             }
             
             //Ciclo para crear la cantidad asignada de habitaciones deluxes y agregarlas al hotel
             for(int i=0;i<deluxe;i++){
                 habitaciones[sen] = new Deluxe(sen+1,1,true,true,1300,true, true, "Sala de estar y cocina", true, true, "Chef privado");
-                hotel.agregarHabitacion(*habitaciones[sen],sen);
+                hotel.agregarHabitacion(habitaciones[sen],sen);
                 sen++;
             }
             menu1=false;
@@ -173,6 +173,8 @@ int main(){
                 cin>>diasHospedaje;
 
                 clientes[numCliente] = new Cliente(nombreCliente,edad,telefono,diasHospedaje);
+                Habitacion *auxRoom = new Sencilla();
+                clientes[numCliente]->agregarHabitacion(auxRoom);
                 hotel.agregarCliente(*clientes[numCliente],numCliente);
                 numCliente++;
             }
@@ -292,7 +294,7 @@ int main(){
                     cout<<"\n\n\tEscribe el numero de habitacion que se asignara:";
                     cin>>hab;
                     hab=hab-1;
-                    clientes[cl]->agregarHabitacion(*habitaciones[hab]);
+                    clientes[cl]->agregarHabitacion(habitaciones[hab]);
                     habitaciones[hab]->setDisponibilidad(false);
 
                     cout<<"\n\n\t\t\tPulse una tecla para regresar";
