@@ -2,7 +2,7 @@
 Ricardo Sierra Roa - A01709887
 Proyecto Administracion Hotel
 Creacion: 24 de mayo de 2023
-Ultima modificacion: 31 de mayo de 2023
+Ultima modificacion: 5 de junio de 2023
 
 Proyecto para la clase TC1030 Programación Orientado a
 Objetos. En este programa se ingresran los datos requeriudos para la
