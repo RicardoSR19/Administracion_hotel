@@ -51,5 +51,14 @@ El programa solo corre en la consola y está hecho con c++ standard por lo que c
 - correr en windows: "a.exe"
 
 
-## Instrucciones para ejecución
-- Se indicarán en un futuro
+## Instrucciones para ejecución (en Windows)
+<ol>
+ <li>Debes descargar todos los archivos contenidos en la carpeta Administracion_Hotel_Codigo</li>
+ <li>Una vez descargados los archivos debes de verificar si tienes instalado el compilador de g++ de lo contrario no será posible ejecutar el programa <br><i>Nota: Si no se cuentas con el compilador ir al siguiente link y seguir los pasos del <a href="https://www.freecodecamp.org/news/how-to-install-c-and-cpp-compiler-on-windows/">tutorial</a> para descargar g++</i> <br>https://www.freecodecamp.org/news/how-to-install-c-and-cpp-compiler-on-windows/</li>
+ <li>Ya que se tenga instalado g++ y los archivos del programa, debes de abrir la consola</li>
+ <li>Abierta la consola debes dirigirte a la ruta donde tengas guardado el programa, para esto normalmente la consola se abre en el disco C, si tienes los archivos del programa en otro disco primero se debe de cambiar de disco, para esto se escribe el nombre del disco seguido por dos puntos (ejemplo D:)</li>
+ <li>Una vez estando en el disco donde se encuentren los archivos debes escribir cd seguido de la ruta donde se encuentre guardado el programa</li>
+ <li>Posteriormente debes de escribir el siguiente comando g++ main.cpp -o main.exe</li>
+ <li>Espera a que se genere el archivo .exe</li>
+ <li>Por último, escribe en la consola main.exe y se debe abrir el programa</li>
+</ol>
