@@ -47,7 +47,9 @@ class Habitacion{
 
         //Super string que nos da la informacion de la habitacion
         string getHabitacionInfo();
-        virtual string getRoomInfo(){return "";}
+
+        //Clase abstracta
+        virtual string getRoomInfo()=0;
 };
 
 //Constructor predefinido
