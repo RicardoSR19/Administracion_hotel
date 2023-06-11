@@ -2,7 +2,7 @@
 Ricardo Sierra Roa - A01709887
 Proyecto Administracion Hotel
 Creacion: 24 de mayo de 2023
-Ultima modificacion: 5 de junio de 2023
+Ultima modificacion: 11 de junio de 2023
 
 Proyecto para la clase TC1030 Programacion Orientado a
 Objetos. En este programa se ingresaran los datos requeridos para la
@@ -14,7 +14,8 @@ la informacion guardada de los clientes
 
 //Bibliotecas externas
 #include <iostream>
-#include <windows.h>
+//#include <windows.h>
+//Activar #include <windows.h> solo en caso de tener Windows
 
 //Biblioteca de los clases del proyecto
 #include "Hotel.h"
@@ -50,7 +51,8 @@ int main(){
 
     //Menu 1
     while(menu1){
-        system("cls");
+        //system("cls");
+        //Activar system("cls"); solo en caso de tener Windows
         
         //Creacion de la habitaciones del hotel (objetos tipo habitacion con polimorfismo)
         cout<<"\n\t"<<hotel.getNombre()<<" "<<hotel.getUbicacion();
@@ -69,7 +71,9 @@ int main(){
         if(hab>numHabitaciones){
             //Mostrar mensaje en caso de ingresar mas habitaciones de lo permitido
             cout<<"\n\t\t\t\tNumero de habitaciones invalido, recuerda que deben ser "<<hotel.getNumHabitaciones()<<" en total"<<endl;
-            Sleep(3500);
+            //Sleep(3500);
+            //Activar Sleep(3500); solo en caso de tener Windows
+            
 
         }else{
             
@@ -98,7 +102,8 @@ int main(){
 
     //Menu principal del administrador del hotel
     while(menu2){
-        system("cls");
+        //system("cls");
+        //Activar system("cls"); solo en caso de tener Windows
         menu3=true;
 
         cout<<"\n\t"<<hotel.getNombre()<<" "<<hotel.getUbicacion()<<endl;
@@ -107,7 +112,8 @@ int main(){
         cin>>op;
 
         if(op=="1"){
-            system("cls");
+            //system("cls");
+            //Activar system("cls"); solo en caso de tener Windows
             cout<<"\n\tHabitaciones disponibles";
 
             //Ciclo para mostrar las habitaciones disponibles y su tipo
@@ -123,10 +129,12 @@ int main(){
                 }
             }
             cout<<"\n\n\t\t\tPulse una tecla para regresar";
-            system("PAUSE>pausaHotel");
+            //system("PAUSE>pausaHotel");
+            //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
         }else if(op=="2"){
-            system("cls");
+            //system("cls");
+            //Activar system("cls"); solo en caso de tener Windows
             cout<<"\n\tHabitaciones no disponibles";
 
             //Ciclo para mostrar las habitaciones no disponibles y su tipo
@@ -142,10 +150,12 @@ int main(){
                 }
             }
             cout<<"\n\n\t\t\tPulse una tecla para regresar";
-            system("PAUSE>pausaHotel");
+            //system("PAUSE>pausaHotel");
+            //Activar system("cls"); solo en caso de tener Windows
 
         }else if(op=="3"){
-            system("cls");
+            //system("cls");
+            //Activar system("cls"); solo en caso de tener Windows
 
             //Definir variables para crear objeto tipo Cliente
             string nombreCliente, telefono;
@@ -180,13 +190,15 @@ int main(){
             }
 
             cout<<"\n\n\t\t\tPulse una tecla para regresar";
-            system("PAUSE>pausaHotel");
+            //system("PAUSE>pausaHotel");
+            //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
         }else if(op=="4"){
 
             //Menu de cliente
             while(menu3){
-                system("cls");
+                //system("cls");
+                //Activar system("cls"); solo en caso de tener Windows
                 cout<<"\n\t"<<hotel.getNombre()<<" "<<hotel.getUbicacion();
                 cout<<"\n\n\tClientes"<<endl;
                 cout<<"\n\t\t1) Ver clientes registrados \n\t\t2) Agregar check-in y check-out \n\t\t3) Modificar check-in y check-out";
@@ -194,7 +206,8 @@ int main(){
                 cin>>op;
 
                 if(op=="1"){
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     int cl;
 
                     //Funcion para ver los clientes registrados y su ver su informacion
@@ -205,14 +218,17 @@ int main(){
                     cin>>cl;
                     cl=cl-1;
 
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     cout<<clientes[cl]->getClienteInfo();
 
                     cout<<"\n\n\t\t\tPulse una tecla para regresar";
-                    system("PAUSE>pausaHotel");
+                    //system("PAUSE>pausaHotel");
+                    //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
                 }else if(op=="2"){
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     string ci, co;
                     int cl;
 
@@ -224,7 +240,8 @@ int main(){
                     cin>>cl;
                     cl=cl-1;
 
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     getline(cin,ci);
                     cout<<"\n\tCheck-In:";
                     getline(cin,ci);
@@ -235,10 +252,12 @@ int main(){
                     clientes[cl]->setCheckOut(co);
 
                     cout<<"\n\n\t\t\tPulse una tecla para regresar";
-                    system("PAUSE>pausaHotel");
+                    //system("PAUSE>pausaHotel");
+                    //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
                 }else if(op=="3"){
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     string ci, co;
                     int cl;
 
@@ -250,7 +269,8 @@ int main(){
                     cin>>cl;
                     cl=cl-1;
 
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     cout<<clientes[cl]->getClienteInfo();
                     getline(cin,ci);
                     cout<<"\n\tNuevo Check-In:";
@@ -262,10 +282,12 @@ int main(){
                     clientes[cl]->setCheckOut(co);
 
                     cout<<"\n\n\t\t\tPulse una tecla para regresar";
-                    system("PAUSE>pausaHotel");
+                    //system("PAUSE>pausaHotel");
+                    //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
                 }else if(op=="4"){
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     int cl, hab;
 
                     //Funcion para agregar una habitacion al cliente (muestra las habitaciones disponibles)
@@ -276,7 +298,8 @@ int main(){
                     cin>>cl;
                     cl=cl-1;
 
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
 
                     cout<<"\n\tHabitaciones disponibles"<<endl;
                     for(int i=0;i<numHabitaciones;i++){
@@ -298,11 +321,12 @@ int main(){
                     habitaciones[hab]->setDisponibilidad(false);
 
                     cout<<"\n\n\t\t\tPulse una tecla para regresar";
-                    system("PAUSE>pausaHotel");
-
+                    //system("PAUSE>pausaHotel");
+                    //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
                 }else if(op=="5"){
-                    system("cls");
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                     int cl;
 
                     //Funcion para calcular el pago total de los dias de hospedaje
@@ -316,43 +340,52 @@ int main(){
                     cout<<"\n\t"<<clientes[cl]->calcularPago();
 
                     cout<<"\n\n\t\t\tPulse una tecla para regresar";
-                    system("PAUSE>pausaHotel");
+                    //system("PAUSE>pausaHotel");
+                    //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
                     
                 }else if(op=="6"){
                     menu3=false;
                 }else{
                     cout<<"\n\t\t\t\t\t\tOpcion invalida, prueba de nuevo"<<endl;
-                    Sleep(800);
-                    system("cls");
+                    //Sleep(800);
+                    //Activar Sleep(800); solo en caso de tener Windows
+                    //system("cls");
+                    //Activar system("cls"); solo en caso de tener Windows
                 }
             }
 
         }else if(op=="5"){
-            system("cls");
+            //system("cls");
+            //Activar system("cls"); solo en caso de tener Windows
 
             //Funcion que muestra la informacion del hotel (la ingresada al iniciar el programa)
             cout<<"\n\tInformacion del hotel";
             cout<<"\n\n"<<hotel.getHotelInfo();
             cout<<"\n\n\t\t\tPulse una tecla para regresar";
-            system("PAUSE>pausaHotel");
+            //system("PAUSE>pausaHotel");
+            //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
         }else if(op=="6"){
             menu2=false;
-            system("cls");
+            //system("cls");
+            //Activar system("cls"); solo en caso de tener Windows
             cout<<"\n\n\n\n\n\n\n\n\n\n\n\n";
             cout<<"\n\t\t\t\t\t\t\tHasta luego";
 
         }else{
             cout<<"\n\t\t\t\t\t\tOpcion invalida, prueba de nuevo"<<endl;
-            Sleep(800);
-            system("cls");
+            //Sleep(800);
+            //Activar Sleep(800); solo en caso de tener Windows
+            //system("cls");
+            //Activar system("cls"); solo en caso de tener Windows
         }
     }
 
     //Pausar el programa y finalizar al presionar una tecla
     cout<<"\n\n\tPulse una tecla para salir";
-    system("PAUSE>pausaHotel");
+    //system("PAUSE>pausaHotel");
+    //Activar system("PAUSE>pausaHotel"); solo en caso de tener Windows
 
     return 0;
 }
